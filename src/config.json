@@ -1,0 +1,20 @@
+{
+    "cognito": 
+    { 
+        "REGION": "us-west-1",
+        "USER_POOL_ID": "us-west-1_nmKUVPOkq",
+        "APP_CLIENT_ID": "69ph4qov1jt34e0qfcq3oj9rp4"
+    },
+    "api":
+    {
+        "invokeUrl": "https://nqyeixuru9.execute-api.us-west-1.amazonaws.com/test"
+    },
+    "Storage":
+    {
+        "AWSS3":
+        {
+            "bucket": "cardgenprofilepictures233133-main",
+            "region": "us-east-1"
+        }
+    }
+}
