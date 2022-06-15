@@ -11,5 +11,18 @@
       "StackId": "arn:aws:cloudformation:us-west-1:361028361029:stack/amplify-businesscardapp-dev-165250/efc75ff0-eb73-11ec-945a-027321ee7767",
       "AmplifyAppId": "d2lxnrndh3az25"
     }
+  },
+  "test": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-businesscardapp-test-144157-authRole",
+      "UnauthRoleArn": "arn:aws:iam::361028361029:role/amplify-businesscardapp-test-144157-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::361028361029:role/amplify-businesscardapp-test-144157-authRole",
+      "Region": "us-west-1",
+      "DeploymentBucketName": "amplify-businesscardapp-test-144157-deployment",
+      "UnauthRoleName": "amplify-businesscardapp-test-144157-unauthRole",
+      "StackName": "amplify-businesscardapp-test-144157",
+      "StackId": "arn:aws:cloudformation:us-west-1:361028361029:stack/amplify-businesscardapp-test-144157/d16bd790-ec2a-11ec-bbc5-06bd0fdecc9b",
+      "AmplifyAppId": "d2a84c2ptcu2gs"
+    }
   }
 }
