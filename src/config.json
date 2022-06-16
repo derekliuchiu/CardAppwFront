@@ -3,7 +3,9 @@
     { 
         "REGION": "us-west-1",
         "USER_POOL_ID": "us-west-1_nmKUVPOkq",
-        "APP_CLIENT_ID": "69ph4qov1jt34e0qfcq3oj9rp4"
+        "APP_CLIENT_ID": "69ph4qov1jt34e0qfcq3oj9rp4",
+        "IDENTITY_POOL_ID": "us-west-1:137f1d9f-334e-40f5-bdb8-33f5be4b677b"
+
     },
     "api":
     {
@@ -13,8 +15,9 @@
     {
         "AWSS3":
         {
-            "bucket": "cardgenprofilepictures233133-main",
-            "region": "us-east-1"
+            "bucket": "cardappbucket",
+            "region": "us-west-1",
+            "IdentityPoolId": "us-west-1:137f1d9f-334e-40f5-bdb8-33f5be4b677b"
         }
     }
 }

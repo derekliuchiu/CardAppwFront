@@ -122,6 +122,7 @@ class EditProfile extends Component {
     {
         if (event.target.files && event.target.files.length > 0)
         {
+            // this.setState({imageSrc: event.target.files[0]});
             const fileReader = new FileReader();
             fileReader.readAsDataURL(event.target.files[0]);
             fileReader.addEventListener('load', () =>
@@ -141,14 +142,16 @@ class EditProfile extends Component {
 
         //const croppedImage = dataURLtoFile(getCroppedImg(image, this.state.croppedAreaPixels), 'temp.jpg');
         const croppedImage = getCroppedImg(image, this.state.croppedAreaPixels);
+        console.log(croppedImage)
+        const result = await Storage.put(this.state.username +'.jpeg', croppedImage, {contentType: "image/jpeg"});
 
-        const downloadElem = document.createElement('a');
-        downloadElem.setAttribute('href', croppedImage);
-        downloadElem.setAttribute('download', 'temp.jpg');
-        downloadElem.style.display = 'none';
-        document.body.appendChild(downloadElem);
-        downloadElem.click();
-        document.body.removeChild(downloadElem);
+        // const downloadElem = document.createElement('a');
+        // downloadElem.setAttribute('href', croppedImage);
+        // downloadElem.setAttribute('download', 'temp.jpg');
+        // downloadElem.style.display = 'none';
+        // document.body.appendChild(downloadElem);
+        // downloadElem.click();
+        // document.body.removeChild(downloadElem);
     }
 
     render() 
