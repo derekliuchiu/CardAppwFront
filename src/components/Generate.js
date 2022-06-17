@@ -22,8 +22,9 @@ class BusinessCard extends React.Component {
 
     async componentDidMount(){
         const response = await axios.get(`${config.api.invokeUrl}/users/${this.props.authObj.user.attributes.email}`);
-        const pic = await Storage.get(`${this.props.authObj.user.attributes.email}.jpeg`, {level: 'public'});
-        console.log(pic)
+        const pic_response = await Storage.get(`${this.props.authObj.user.attributes.email}.jpeg`, {level: 'public', download: true});
+        const pic_data = await pic_response.Body.text()
+        console.log(pic_data)
         this.setState({
             email : response.data.Item.email,
             fullname: response.data.Item.fullname,
@@ -32,7 +33,7 @@ class BusinessCard extends React.Component {
             job : response.data.Item.job_title,
             employer : response.data.Item.employer,
             city: response.data.Item.city,
-            pfp: pic //signed url
+            pfp: pic_data 
         })
     }
 

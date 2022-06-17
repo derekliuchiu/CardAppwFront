@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {Image} from 'react-native';
 import axios from "axios";
 import Cropper from 'react-easy-crop';
 import { getCroppedImg } from './utility/CropImage.js';
@@ -144,16 +143,16 @@ class EditProfile extends Component {
         //const croppedImage = dataURLtoFile(getCroppedImg(image, this.state.croppedAreaPixels), 'temp.jpg');
         const croppedImage = getCroppedImg(image, this.state.croppedAreaPixels);
         // const ImageUri = Image.resolveAssetSource(croppedImage).uri
-        try {
-            const response = await fetch("");
-            const blob = await response.blob();
-            await Storage.put(this.state.username + 'jpeg', blob, {
-              contentType: "image/jpeg", // contentType is optional
-            });
-          } catch (err) {
-            console.log("Error uploading file:", err);
-          }
-        //const result = await Storage.put(this.state.username +'.jpeg', croppedImage, {contentType: "image/jpeg"});
+        // try {
+        //     const response = await fetch("");
+        //     const blob = await response.blob();
+        //     await Storage.put(this.state.username + 'jpeg', blob, {
+        //       contentType: "image/jpeg", // contentType is optional
+        //     });
+        //   } catch (err) {
+        //     console.log("Error uploading file:", err);
+        //   }
+        const result = await Storage.put(this.state.username +'.jpeg', croppedImage, {contentType: "image/jpeg"});
         $("#cropperdiv").hide();
         $("#buttondiv").hide();
 
