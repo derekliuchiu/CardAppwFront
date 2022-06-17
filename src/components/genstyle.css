@@ -1,0 +1,41 @@
+h1, p {
+    font-family: Lato;
+  }
+
+.cardDiv {
+    width:41em;
+    height:22em;
+    color:#777;
+    background-color:#F0F0F0;
+    margin:5% auto 0 auto;
+    border-radius:0.4em;
+    border-top-right-radius:0.37em;
+    border-bottom-right-radius:0.37em;
+    box-shadow:0 0 3px rgba(0,0,0,0.15);
+    transition:box-shadow 200ms ease-in;
+}
+    
+.card {
+    padding:1.6em 2em 2em 14em;
+}
+        
+.cardName {
+    color:#008080;
+    font-size:2.2em;
+    letter-spacing:1px;
+    }
+
+.cardJob {
+    color:#00CED1;
+    font-size:1.2em;
+    margin-top:0.2em;
+}
+        
+.cardEmail, .cardPhoneNumber, .cardEmployer, .cardCity, .cardBirthday{
+font-family:'Ubuntu Mono',monospace;
+    margin:1em 0;
+font-weight:700;
+color: black;
+}
+    
+    

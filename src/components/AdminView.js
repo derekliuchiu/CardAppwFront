@@ -51,7 +51,8 @@ class AdminView extends Component {
         $("#submitBtn").off(); /* prevents events from stacking */
         $("#submitBtn").on("click", this.readUsers);
         let userListDirty = await axios.get(`${config.api.invokeUrl}/users`);
-        userListDirty = userListDirty.data.Items;
+        
+        userListDirty = userListDirty.data;
         ReactDOM.render(<DataTable data={userListDirty}/>, document.getElementById('readUsersDiv'));
         $("#readUsersDiv").show();
     }
@@ -210,7 +211,10 @@ class AdminView extends Component {
                 const { email } = params;
                 await Auth.signUp({
                     username: email,
-                    "password": cryptoPassFull
+                    "password": cryptoPassFull,
+                    attributes: {
+                        email: email,
+                    }
                 }); 
 
                 $(".adminViewElem").hide();
